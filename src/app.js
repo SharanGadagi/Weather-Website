@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const hbs=require('hbs')
 const path=require('path');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 //serving file path
 const staticpath=path.join(__dirname, "../public")
 const templates_path=path.join(__dirname, "../templates/views")
