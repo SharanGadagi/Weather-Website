@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const hbs=require('hbs')
 const path=require('path');
-const port = process.env.PORT;
+const port = process.env.PORT||5000;
 //serving file path
 const staticpath=path.join(__dirname, "../public")
 const templates_path=path.join(__dirname, "../templates/views")
@@ -34,4 +34,4 @@ app.get("*",(req,res)=>{
 
 app.listen(port, () => {
     console.log(`listening on port:http://localhost:${port}`);
-})
+}) 
